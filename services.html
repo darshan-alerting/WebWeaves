@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indian Culture</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .container2 {
+            position: relative;
+            z-index: -1;
+            width: 100%;
+            margin: auto;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 99;
+            /* Sit on top */
+            padding-top: 50px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: black;
+            margin: auto;
+            color: white;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #dynamic-title {
+            font-size: 25px;
+        }
+
+        /* Flip card css */
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 400px;
+            perspective: 1000px;
+            font-family: sans-serif;
+            /* position: relative;
+            z-index: -1; */
+        }
+
+        .title {
+            font-size: 1.5em;
+            font-weight: 900;
+            text-align: center;
+            margin: 0;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border: 1px solid coral;
+            border-radius: 1rem;
+        }
+
+        .flip-card-front {
+            background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%,
+                    rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%);
+            color: coral;
+        }
+
+        .flip-card-back {
+            background: linear-gradient(120deg, rgb(49, 47, 47) 30%, rgb(29, 27, 26) 88%,
+                    bisque 40%, rgb(51, 51, 51) 78%);
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .shop-drone-img {
+            height: 65%;
+            width: 100%;
+            border-top-left-radius: 17px;
+            border-top-right-radius: 17px;
+        }
+
+        /* Modal style */
+        .Modal {
+            display: block;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 9999;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            background-color: rgba(0, 0, 0, 0.4);
+            -webkit-transition: 0.5s;
+            overflow: auto;
+            transition: all 0.3s linear;
+        }
+
+        .Modal-content {
+            /* background-color: white; */
+            margin: auto;
+            /* padding: 20px; */
+            border-radius: 4px;
+            max-width: 300px;
+            height: auto;
+        }
+
+        .ModalOpen {
+            overflow: hidden;
+        }
+
+        .is-hidden {
+            display: none;
+        }
+
+        .is-visuallyHidden {
+            opacity: 0;
+        }
+
+        .Close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 25px;
+            position: relative;
+            left: 85px;
+            top: 37px;
+            z-index: 100000;
+        }
+
+        .Close:hover,
+        .Close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Content blur */
+
+        .is-blurred {
+            filter: blur(2px);
+            -webkit-filter: blur(2px);
+        }
+
+        /* Checkout Page */
+        /* Body */
+        .container-co {
+            display: grid;
+            grid-template-columns: auto;
+            gap: 0px;
+        }
+
+        hr {
+            height: 1px;
+            background-color: rgba(16, 86, 82, .75);
+            ;
+            border: none;
+        }
+
+        .card {
+            width: 400px;
+            background: #2c2c2c;
+            box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01), 0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09), 0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            width: 100%;
+            height: 40px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            border-bottom: 1px solid rgba(16, 86, 82, .75);
+            font-weight: 700;
+            font-size: 18px;
+            color: white;
+        }
+
+        /* Cart */
+        .cart {
+            border-radius: 19px 19px 0px 0px;
+        }
+
+        .cart .steps {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .cart .steps .step {
+            display: grid;
+            gap: 10px;
+        }
+
+        .cart .steps .step span {
+            font-size: 13px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .cart .steps .step p {
+            font-size: 11px;
+            font-weight: 600;
+            color: #000000;
+        }
+
+        /* Promo */
+        .promo form {
+            display: grid;
+            grid-template-columns: 1fr 80px;
+            gap: 10px;
+            padding: 0px;
+        }
+
+        .input_field {
+            width: 100%;
+            height: 36px;
+            padding: 0 0 0 12px;
+            color: #fff;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid rgb(115, 125, 125);
+            background-color: black;
+            transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+        }
+
+        .input_field:focus {
+            border: 1px solid transparent;
+            /* box-shadow: 0px 0px 0px 2px rgb(251, 243, 228); */
+            background-color: black;
+        }
+
+        .promo form button {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 18px;
+            gap: 10px;
+            width: 100%;
+            height: 36px;
+            background: rgba(16, 86, 82, .75);
+            box-shadow: 0px 0.5px 0.5px #F3D2C9, 0px 1px 0.5px rgba(239, 239, 239, 0.5);
+            border-radius: 5px;
+            border: 0;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 15px;
+            color: #000000;
+        }
+
+        .form-check-label {
+            color: #cecece;
+        }
+
+        /* Checkout */
+        .payments .details {
+            display: grid;
+            grid-template-columns: 10fr 1fr;
+            padding: 0px;
+            gap: 5px;
+        }
+
+        .payments .details span:nth-child(odd) {
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+            margin: auto auto auto 0;
+        }
+
+        .payments .details span:nth-child(even) {
+            font-size: 13px;
+            font-weight: 600;
+            color: #ffffff;
+            margin: auto 0 auto auto;
+        }
+
+        .checkout .footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 10px 10px 20px;
+            background-color: #111111;
+        }
+
+        .price {
+            position: relative;
+            font-size: 22px;
+            color: #ffffff;
+            font-weight: 900;
+        }
+
+        .checkout .checkout-btn {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 36px;
+            /* background: rgba(16, 86, 82, .55); */
+            /* box-shadow: 0px 0.5px 0.5px rgba(16, 86, 82, .75), 0px 1px 0.5px rgba(16, 86, 82, .75); */
+            border-radius: 7px;
+            /* border: 1px solid rgb(16, 86, 82); */
+            /* color: #000000; */
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+        }
+
+        .btn-ui {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 13rem;
+            overflow: hidden;
+            height: 3rem;
+            background-size: 300% 300%;
+            backdrop-filter: blur(1rem);
+            border-radius: 5rem;
+            transition: 0.5s;
+            animation: gradient_301 5s ease infinite;
+            border: double 4px transparent;
+            background-image: linear-gradient(#000000, #212121), linear-gradient(137.48deg, #353329 10%, #474545 45%, #696374 67%, #000000 87%);
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            position: relative;
+            z-index: 0;
+        }
+
+        #container-stars {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            transition: 0.5s;
+            backdrop-filter: blur(1rem);
+            border-radius: 5rem;
+        }
+
+        strong {
+            z-index: 2;
+            font-family: 'Avalors Personal Use';
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #FFFFFF;
+            /* text-shadow: 0 0 0px white; */
+        }
+
+        #glow {
+            position: absolute;
+            display: flex;
+            width: 12rem;
+        }
+
+        .circle {
+            width: 100%;
+            height: 30px;
+            filter: blur(2rem);
+            animation: pulse_3011 4s infinite;
+            z-index: -1;
+        }
+
+        .circle:nth-of-type(1) {
+            background: black;
+        }
+
+        .circle:nth-of-type(2) {
+            background: black;
+        }
+
+        .btn-ui #container-stars {
+            z-index: 1;
+            background-color: #212121;
+        }
+
+        .btn-ui {
+            transform: scale(1.1)
+        }
+
+        .btn-ui:active {
+            /* border: double 4px #FE53BB; */
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            animation: none;
+        }
+
+        #submit-btn {
+            background-color: rgb(48, 50, 51);
+        }
+
+
+        /* .btn:active .circle {
+            background: #FE53BB;
+        } */
+
+        #stars {
+            position: relative;
+            background: transparent;
+            width: 200rem;
+            height: 200rem;
+        }
+
+        #stars::after {
+            content: "";
+            position: absolute;
+            top: -10rem;
+            left: -100rem;
+            width: 100%;
+            height: 100%;
+            animation: animStarRotate 90s linear infinite;
+        }
+
+        #stars::after {
+            background-image: radial-gradient(#ffffff 1px, transparent 1%);
+            background-size: 50px 50px;
+        }
+
+        #submit-btn {
+            background-color: rgb(48, 50, 51);
+        }
+
+
+        #stars::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 170%;
+            height: 500%;
+            animation: animStar 60s linear infinite;
+        }
+
+        #stars::before {
+            background-image: radial-gradient(#ffffff 1px, transparent 1%);
+            background-size: 50px 50px;
+            opacity: 0.5;
+        }
+
+        @keyframes animStar {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-135rem);
+            }
+        }
+
+        @keyframes animStarRotate {
+            from {
+                transform: rotate(360deg);
+            }
+
+            to {
+                transform: rotate(0);
+            }
+        }
+
+        @keyframes gradient_301 {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes pulse_3011 {
+            0% {
+                transform: scale(0.75);
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+            }
+
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+            }
+
+            100% {
+                transform: scale(0.75);
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <span class="ind">Indian</span>
+            <span class="cul">Culture.</span>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <li class="nav-item">Home</li>
+                </a>
+                <a href="services.html" class="nav-link">
+                    <li class="nav-item">Services</li>
+                </a>
+                <a href="blog.html" class="nav-link">
+                    <li class="nav-item">Blogs</li>
+                </a>
+                <a href="about.html" class="nav-link">
+                    <li class="nav-item">About Us</li>
+                </a>
+            </ul>
+
+
+        </nav>
+        <div class="navbar-link text-white mr-1 dynamic-button py-auto flex gap-x-4">
+            <button class="btn btn-dark"
+                onclick="window.location.href='http://127.0.0.1:5500/login.html';">Login</button>
+            <button class="btn btn-dark" onclick="window.location.href='http://127.0.0.1:5500/signup.html';">Sign
+                Up</button>
+        </div>
+        <div class="ham">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <!-- <div class="search">
+        <input type="text" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div> -->
+    </header>
+
+    <div id="myModal" class="Modal is-hidden is-visuallyHidden">
+        <!-- Modal content -->
+        <div class="Modal-content">
+            <span id="closeModal" class="Close">&times;</span>
+            <div class="">
+                <div class="card cart">
+                    <label class="title">CHECKOUT</label>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="promo">
+                                <span>SHIPPING DETAILS</span>
+                                <form class="form">
+                                    <input type="text" placeholder="Enter your delivery address" id="address"
+                                        class="input_field" style="width: 100%;"><br>
+                                    <input type="text" placeholder="Enter your Phone Number" name="phone"
+                                        id="phonenumber" class="input_field" style="width: 100%;"><br>
+                                    <input type="email" placeholder="Enter your Email Address" name="email" id="emailid"
+                                        class="input_field" style="width: 100%;">
+                                </form>
+                            </div>
+                            <hr>
+                            <div>
+                                <span>PAYMENT METHOD</span>
+                                <div>
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Cash on Delivery
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Online UPI
+                                    </label>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="payments">
+                                <span>PAYMENT</span>
+                                <div class="details">
+                                    <span>Subtotal:</span>
+                                    <span id="product_price">&#8377;240.00</span>
+                                    <span>Shipping:</span>
+                                    <span>Free</span>
+                                    <span>Tax:</span>
+                                    <span id="product_tax">&#8377;30.40</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span id="product_id" style="display: none;"></span>
+                </div>
+
+                <div class="card checkout">
+                    <div class="footer">
+                        <label class="price" id="product_total">&#8377;280.40</label>
+                        <button class="checkout-btn btn btn-dark"
+                            onclick="alert('Dear Traveller\nYour hired guide is booked\n He will contact you shortly')">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="horizontal"></div>
+    <section>
+        <div class="main">
+            <div class="map">
+                <div class="container container3 mt-3">
+                    <div class="container my-5">
+                        <div class="container">
+                            <p class="text-center text-4xl">Language Translator</p>
+                        </div>
+                        <div class="flex my-5">
+                            <select class="form-select mx-5" id="sourceLang" aria-label="Default select example">
+                                <option selected value="en">English</option>
+                                <option value="af">Afrikaans</option>
+                                <option value="ar">Arabic</option>
+                                <option value="bn">Bengali</option>
+                                <option value="zh-CN">Chinese (Simplified)</option>
+                                <option value="zh-TW">Chinese (Traditional)</option>
+                                <option value="da">Danish</option>
+                                <option value="nl">Dutch</option>
+                                <option value="en">English</option>
+                                <option value="fr">French</option>
+                                <option value="ka">Georgian</option>
+                                <option value="de">German</option>
+                                <option value="el">Greek</option>
+                                <option value="gu">Gujarati</option>
+                                <option value="hi">Hindi</option>
+                                <option value="id">Indonesian</option>
+                                <option value="it">Italian</option>
+                                <option value="ja">Japanese</option>
+                                <option value="kn">Kannada</option>
+                                <option value="ko">Korean</option>
+                                <option value="la">Latin</option>
+                                <option value="ml">Malayalam</option>
+                                <option value="mr">Marathi</option>
+                                <option value="my">Myanmar</option>
+                                <option value="ne">Nepali</option>
+                                <option value="pt">Portuguese</option>
+                                <option value="pa">Punjabi</option>
+                                <option value="ro">Romanian</option>
+                                <option value="ru">Russian</option>
+                                <option value="sd">Sindhi</option>
+                                <option value="es">Spanish</option>
+                                <option value="sv">Swedish</option>
+                                <option value="ta">Tamil</option>
+                                <option value="te">Telugu</option>
+                                <option value="tr">Turkish</option>
+                                <option value="uk">Ukrainian</option>
+                                <option value="ur">Urdu</option>
+                                <option value="vi">Vietnamese</option>
+                                <option value="cy">Welsh</option>
+                                <option value="xh">Xhosa</option>
+                                <option value="yi">Yiddish</option>
+                                <option value="zu">Zulu</option>
+                            </select>
+                            <select class="form-select mx-5" id="targetLang" aria-label="Default select example">
+                                <option selected value="hi">Hindi</option>
+                                <option value="af">Afrikaans</option>
+                                <option value="ar">Arabic</option>
+                                <option value="bn">Bengali</option>
+                                <option value="zh-CN">Chinese (Simplified)</option>
+                                <option value="zh-TW">Chinese (Traditional)</option>
+                                <option value="da">Danish</option>
+                                <option value="nl">Dutch</option>
+                                <option value="en">English</option>
+                                <option value="fr">French</option>
+                                <option value="ka">Georgian</option>
+                                <option value="de">German</option>
+                                <option value="el">Greek</option>
+                                <option value="gu">Gujarati</option>
+                                <option value="hi">Hindi</option>
+                                <option value="id">Indonesian</option>
+                                <option value="it">Italian</option>
+                                <option value="ja">Japanese</option>
+                                <option value="kn">Kannada</option>
+                                <option value="ko">Korean</option>
+                                <option value="la">Latin</option>
+                                <option value="ml">Malayalam</option>
+                                <option value="mr">Marathi</option>
+                                <option value="my">Myanmar</option>
+                                <option value="ne">Nepali</option>
+                                <option value="pt">Portuguese</option>
+                                <option value="pa">Punjabi</option>
+                                <option value="ro">Romanian</option>
+                                <option value="ru">Russian</option>
+                                <option value="sd">Sindhi</option>
+                                <option value="es">Spanish</option>
+                                <option value="sv">Swedish</option>
+                                <option value="ta">Tamil</option>
+                                <option value="te">Telugu</option>
+                                <option value="tr">Turkish</option>
+                                <option value="uk">Ukrainian</option>
+                                <option value="ur">Urdu</option>
+                                <option value="vi">Vietnamese</option>
+                                <option value="cy">Welsh</option>
+                                <option value="xh">Xhosa</option>
+                                <option value="yi">Yiddish</option>
+                                <option value="zu">Zulu</option>
+                            </select>
+                        </div>
+                        <div class="mb-2 mx-5">
+                            <label for="exampleFormControlTextarea1" class="form-label">Enter the source language
+                                text</label>
+                            <textarea class="form-control" id="sourceText" rows="3"></textarea>
+                        </div>
+                        <div class="mx-5 my-3">
+                            <button class="container btn btn-dark" onclick="func1()">Translate</button>
+                        </div>
+                        <div class="mx-5">
+                            <label for="exampleFormControlTextarea1" class="form-label">Target language text generated
+                                here</label>
+                            <textarea class="form-control" id="targetText" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="main">
+            <div class="map">
+                <div id="myContainer">
+                    <div class="justify-around mb-5">
+                        <p class="text-center text-4xl my-3">For better experience Hire!!</p>
+                        <div class="flex justify-around flex-wrap my-5" id="dynamic-content">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer -->
+    <footer class="text-gray-600 body-font">
+        <div
+            class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+            <div class="w-50 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                <div class="logo ml-12">
+                    <span class="ind">Indian</span>
+                    <span class="cul">Culture.</span>
+                </div>
+                <p class="mt-2 text-sm text-gray-500">A platform where you can explore the diverse festivals, religion
+                    and
+                    places of India</p>
+            </div>
+            <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Our Pages</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800" href="/">Home</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800" href="/services.html">Services</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800" href="/blog.html">Blogs</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800" href="/about.html">About Us</a>
+                        </li>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="logic.js"></script>
+<script>
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    function deleteAllCookies() {
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i];
+            var eqPos = cookie.indexOf("=");
+            var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+        alert("Logged out...")
+        location.reload();
+    }
+    let email = getCookie("email");
+    if (email != "") {
+        let temp = document.getElementsByClassName("dynamic-button");
+        for (let i = 0; i < temp.length; i++) {
+            temp[i].innerHTML = `<button class="btn btn-dark" onclick="deleteAllCookies()">Log Out</button>`;
+        }
+        // location.reload();
+    } else {
+        let temp = document.getElementsByClassName("dynamic-button");
+        for (let i = 0; i < temp.length; i++) {
+            temp[i].innerHTML = `<button class="btn btn-dark" style="width:90px" onclick="window.location.href='http://127.0.0.1:5500/login.html';">Login</button>
+                        <button class="btn btn-dark" style="width:90px" onclick="window.location.href='http://127.0.0.1:5500/signup.html';">Sign Up</button>`;
+        }
+        // location.reload();
+    }
+</script>
+<script>
+    const func1 = async () => {
+        let sourceLang = document.getElementById("sourceLang").options.item(document.getElementById("sourceLang").selectedIndex).value;
+        let targetLang = document.getElementById("targetLang").options.item(document.getElementById("targetLang").selectedIndex).value;
+        let sourceText = document.getElementById("sourceText").value
+        console.log(sourceLang)
+        console.log(targetLang)
+        console.log(sourceText)
+
+
+        const encodedParams = new URLSearchParams();
+        encodedParams.set('q', sourceText);
+        encodedParams.set('target', targetLang);
+        encodedParams.set('source', sourceLang);
+        try {
+            let res = await fetch('https://google-translate1.p.rapidapi.com/language/translate/v2', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/x-www-form-urlencoded',
+                    'Accept-Encoding': 'application/gzip',
+                    'X-RapidAPI-Key': '1dfb11d175msh5a77ab209cecbdap148985jsncfec61dbd000',
+                    'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
+                },
+                body: encodedParams
+            }).then(res => res.json())
+                .then(res => document.getElementById("targetText").value = res.data.translations[0].translatedText);
+
+        } catch (error) {
+            console.error(error);
+        }
+    }
+</script>
+<script>
+    fetch('http://localhost:3100/getData')
+        .then(res => {
+            return res.json();
+        })
+        .then(data => {
+            console.log(data);
+            let markup = ""
+            for (let i = 0; i < data.length; i++) {
+                markup = markup + `<div class="mx-2 my-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="${data[i].guide_img}" alt="drone" width="100%" class="shop-drone-img">
+                            <div class="box rounded-b-2xl" style="height: 35%; background-color: #212121;">
+                                <section class="text-gray-600 body-font overflow-hidden">
+                                    <div class="container-co">
+                                        <div class="w-full mx-auto flex flex-wrap">
+                                            <div class="w-full">
+                                                <h2 class="text-sm title-font text-gray-500 tracking-widest mt-3">
+                                                    
+                                                </h2>
+                                                <h1 class="text-gray-100 text-xl title-font font-medium">${data[i].guide_name}</h1>
+                                                <div class="flex my-4 mx-3">
+                                                    <p
+                                                        class="w-full m-auto border-gray-200 text-white text-2xl">&#8377;${data[i].guide_rent}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <section class="text-gray-600 body-font overflow-hidden">
+                                <div class="container mx-auto">
+                                    <div class="mx-auto flex flex-wrap">
+                                        <div class="w-full">
+                                            <h2 class="text-lg title-font text-gray-100 tracking-widest">${data[i].guide_name}
+                                            </h2>
+                                            <p class="text-gray-400 text-xs text-left mt-10">Description:-</p>
+                                            <p class="text-sm text-gray-200">${data[i].guide_description}</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center w-full mt-3">
+                    <button class="btn-ui btn-disable-flag m-auto" type="button" id="a${data[i].guide_id}" onclick="checkout(${data[i].guide_id})">
+                        <strong class="text-lg"><i class="fa-solid fa-cart-shopping"></i> Hire Now</strong>
+                        <div id="container-stars">
+                            <div id=""></div>
+                        </div>
+
+                        <div id="glow glow-shop">
+                            <div class="circle"></div>
+                            <div class="circle"></div>
+                        </div>
+                    </button>
+                </div>
+            </div> `
+                document.getElementById("dynamic-content").innerHTML = markup;
+            }
+        })
+        .catch(error => console.log(error))
+</script>
+<script>
+    var modal = document.getElementById('myModal');
+    var container = document.getElementById('myContainer');
+    var body = document.getElementsByTagName('body');
+    var btnOpen = document.getElementsByClassName("myBtn");
+    var btnClose = document.getElementById("closeModal");
+
+    function checkout(id) {
+        let ele_id = "a" + id
+        let myElement = document.getElementById(ele_id);
+        console.log(myElement)
+        if (myElement.classList.contains("btn-disable")) {
+            alert("Please Login!! \n\nOnly registered user can Buy...")
+        } else {
+            fetch(`http://localhost:3100/getDataUsingId?id=${id}`)
+                .then(res => {
+                    return res.json();
+                })
+                .then(data => {
+                    console.log(data)
+                    for (let i = 0; i < data.length; i++) {
+                        let product_price = Number(data[i].guide_rent);
+                        let tax = product_price * 6 / 100;
+                        let total = product_price + tax;
+                        document.getElementById("product_price").innerHTML = "&#8377;" + data[i].guide_rent;
+                        document.getElementById("product_tax").innerHTML = "&#8377;" + tax;
+                        document.getElementById("product_total").innerHTML = "&#8377;" + total;
+                        document.getElementById("product_id").innerHTML = data[i].guide_id;
+                    }
+                })
+                .catch(error => console.log(error))
+            modal.className = "Modal is-visuallyHidden";
+            setTimeout(function () {
+                container.className = "MainContainer is-blurred";
+                modal.className = "Modal";
+            }, 100);
+            container.parentElement.className = "ModalOpen";
+        }
+    }
+    // Close the modal
+    btnClose.onclick = function () {
+        modal.className = "Modal is-hidden is-visuallyHidden";
+        body.className = "";
+        container.className = "MainContainer";
+        container.parentElement.className = "";
+    }
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.className = "Modal is-hidden";
+            body.className = "";
+            container.className = "MainContainer";
+            container.parentElement.className = "";
+        }
+    }
+</script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    const myTimeout = setTimeout(chechCookie, 2000);
+    function submitBlog() {
+        let emailc = getCookie("email");
+        if (emailc != "") {
+            const form = document.getElementById("form-file-input");
+            const fd = new FormData(form);
+            console.log(fd)
+            // const urlEncoded = new URLSearchParams(fd).toString();
+            let blog = document.getElementById("blog").value;
+            let title = document.getElementById("title").value;
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let blog_image = document.getElementById("blog_image").value;
+            console.log(blog_image)
+            if (!ValidateEmail(email)) {
+                alert("Enter a valid email Id");
+                return;
+            }
+            if (name.length < 3) {
+                alert("Enter a valid name");
+                return;
+            }
+            fetch("http://localhost:3100/addBlog", {
+                method: "POST",
+                body: fd
+            });
+            alert("Your blog is added");
+            // location.reload();
+        } else {
+            alert("Only login user can write a blog");
+            // location.reload();
+        }
+
+    }
+    function ValidateEmail(input) {
+        var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (input.match(validRegex)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function chechCookie() {
+        let email = getCookie("email");
+        if (email != "") {
+        } else {
+            let btn_arr = document.getElementsByClassName("btn-disable-flag");
+            for (let i = 0; i < btn_arr.length; i++) {
+                btn_arr[i].classList.add("btn-disable");
+            }
+        }
+    }
+</script>
+<script>
+    // const mobile_nav = document.querySelector(".mobile-navbar-btn");
+    // const nav_header = document.querySelector(".header");
+    function func1() {
+        let arr = document.getElementsByClassName('flip-card')
+        for (let i = 0; i < arr.length; i++) {
+            arr[i].style.cssText = 'position:relative;z-index:-1;';
+        }
+    }
+    function func2() {
+        let arr = document.getElementsByClassName('flip-card')
+        for (let i = 0; i < arr.length; i++) {
+            arr[i].style.removeProperty("position");
+            arr[i].style.removeProperty("z-index");
+        }
+    }
+    function finalcheck() {
+        let address = document.getElementById("address").value;
+        let phonenumber = document.getElementById("phonenumber").value;
+        let emailid = document.getElementById("emailid").value;
+        if (address == "") {
+            alert("Please enter your delivery address")
+            return
+        }
+        if (phonenumber.length != 10 || isNaN(phonenumber)) {
+            alert("Please enter valid phone number")
+            return
+        }
+        if (!ValidateEmail(emailid)) {
+            alert("Please enter valid Email Id")
+            return
+        }
+        let id = document.getElementById("product_id").innerText
+        sendMail(id, emailid);
+        alert(`Dear Customer,\n\nYour order is recorded we will contact you soon\nDelivery Address :- ${address}\nPhone Number :- ${phonenumber}\nE-mail Id :- ${emailid}\n\nYour Product will reach you soon`);
+        var modal = document.getElementById('myModal');
+        var container = document.getElementById('myContainer');
+        address.innerText = ""
+        address.phonenumber = ""
+        address.emailid = ""
+        modal.className = "Modal is-hidden is-visuallyHidden";
+        body.className = "";
+        container.className = "MainContainer";
+        container.parentElement.className = "";
+    }
+    function ValidateEmail(input) {
+        var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (input.match(validRegex)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function sendMail(id, emailid) {
+        fetch(`http://localhost:3100/getDataUsingId?id=${id}`)
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                for (let i = 0; i < data.length; i++) {
+                    let msg = `This mail is to acknowledge that your order is comfirmed on <b>AeroTech Drones Pvt. Ltd.</b> <br><br>Product Details :- <br>Name :- <i>${data[i].product_name}</i><br>Price :- <i>${data[i].product_price}</i><br>Category :- <i>${data[i].product_category}</i><br>Description :- <i>${data[i].product_description}</i><br><br>Your product will reach you within 24 hrs<br><br>Thank You`;
+                    Email.send({
+                        Host: "smtp.elasticemail.com",
+                        Username: "jdarshan535@gmail.com",
+                        Password: "5AD666C38FF8083C203B9A079C5DD5B65388",
+                        To: emailid,
+                        From: "jdarshan535@gmail.com",
+                        Subject: "AeroTech Drones Pvt. Ltd.",
+                        Body: msg
+                    }).then(
+                        message => {
+                            if (message == 'OK') {
+                            } else {
+                            }
+                        }
+                    );
+                }
+            })
+            .catch(error => console.log(error))
+    }
+</script>
+
+</html>

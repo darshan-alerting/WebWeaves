@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indian Culture</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .container2 {
+            position: relative;
+            z-index: -1;
+            width: 100%;
+            margin: auto;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 99;
+            /* Sit on top */
+            padding-top: 50px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: black;
+            margin: auto;
+            color: white;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #dynamic-title {
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <span class="ind">Indian</span>
+            <span class="cul">Culture.</span>
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <li class="nav-item">Home</li>
+                </a>
+                <a href="services.html" class="nav-link">
+                    <li class="nav-item">Services</li>
+                </a>
+                <a href="blog.html" class="nav-link">
+                    <li class="nav-item">Blogs</li>
+                </a>
+                <a href="about.html" class="nav-link">
+                    <li class="nav-item">About Us</li>
+                </a>
+            </ul>
+
+
+        </nav>
+        <div class="navbar-link text-white mr-1 dynamic-button py-auto flex gap-x-4">
+            <button class="btn btn-dark"
+                onclick="window.location.href='http://127.0.0.1:5500/login.html';">Login</button>
+            <button class="btn btn-dark" onclick="window.location.href='http://127.0.0.1:5500/signup.html';">Sign
+                Up</button>
+        </div>
+        <div class="ham">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <!-- <div class="search">
+        <input type="text" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div> -->
+    </header>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" style="position: absolute; right: 15px; top: 0px;">&times;</span>
+            <img src="" alt="" id="dynamic-image" width="400px" class="m-auto">
+            <p id="dynamic-title" class="my-3 text-center"></p><br>
+            <p id="dynamic-text"></p>
+        </div>
+
+    </div>
+
+    <div class="horizontal"></div>
+    <section>
+        <div class="main">
+            <div class="map">
+                <div class="container container3 mt-3">
+                    <p class="text-center text-black">Note:- If you want to add your blog you can <a
+                            href="#AddBlog">Click here</a>
+                    </p>
+                </div>
+
+                <!-- Blog Section -->
+                <section class="text-gray-600 body-font">
+                    <div class="container py-24 mx-auto">
+                        <div class="flex flex-wrap -m-4" id="dynamic-blog">
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="container5 py-10" id="AddBlog" style="background-color: rgb(145, 145, 216);">
+        <div
+            class="max-w-md mx-auto relative overflow-hidden z-10 bg-gray-800 p-8 rounded-lg shadow-md before:w-24 before:h-24 before:absolute before:bg-purple-600 before:rounded-full before:-z-10 before:blur-2xl after:w-32 after:h-32 after:absolute after:bg-sky-400 after:rounded-full after:-z-10 after:blur-xl after:top-24 after:-right-12">
+            <h2 class="text-2xl font-bold text-white mb-6">Enter Your Blog</h2>
+
+            <form id="form-file-input">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-300" for="name">Full Name</label>
+                    <input class="mt-1 p-2 w-full bg-gray-700 border border-gray-600 rounded-md text-white" id="name"
+                        type="text" />
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-300" for="email">Email Address</label>
+                    <input class="mt-1 p-2 w-full bg-gray-700 border border-gray-600 rounded-md text-white" name="email"
+                        id="email" type="email" />
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-300" for="name">Blog Title</label>
+                    <input class="mt-1 p-2 w-full bg-gray-700 border border-gray-600 rounded-md text-white" id="title"
+                        name="title" type="text" />
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-300" for="blog">Blog Description</label>
+                    <textarea class="mt-1 p-2 w-full bg-gray-700 border border-gray-600 rounded-md text-white" rows="3"
+                        name="description" id="blog"></textarea>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-300" for="blog">Blog Image</label>
+                    <input type="file" name="blog_img" id="blog_image" class=" text-gray-300" accept="image/*">
+                </div>
+            </form>
+            <button type="submit"
+                class="bg-gradient-to-r from-purple-600 via-purple-400 to-blue-500 text-black px-4 py-2 font-bold rounded-md hover:opacity-50"
+                onclick="submitBlog()">Publish your Blog</button>
+        </div>
+
+    </div>
+
+    <!-- footer -->
+    <footer class="text-gray-600 body-font">
+        <div
+            class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+            <div class="w-50 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                <div class="logo ml-12">
+                    <span class="ind">Indian</span>
+                    <span class="cul">Culture.</span>
+                </div>
+                <p class="mt-2 text-sm text-gray-500">A platform where you can explore the diverse festivals, religion
+                    and
+                    places of India</p>
+            </div>
+            <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+                <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Our Pages</h2>
+                    <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800" href="/">Home</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800" href="/services.html">Services</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800" href="/blog.html">Blogs</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800" href="/about.html">About Us</a>
+                        </li>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="logic.js"></script>
+<script>
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    function deleteAllCookies() {
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i];
+            var eqPos = cookie.indexOf("=");
+            var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+            document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+        }
+        alert("Logged out...")
+        location.reload();
+    }
+    let email = getCookie("email");
+    if (email != "") {
+        let temp = document.getElementsByClassName("dynamic-button");
+        for (let i = 0; i < temp.length; i++) {
+            temp[i].innerHTML = `<button class="btn btn-dark" onclick="deleteAllCookies()">Log Out</button>`;
+        }
+        // location.reload();
+    } else {
+        let temp = document.getElementsByClassName("dynamic-button");
+        for (let i = 0; i < temp.length; i++) {
+            temp[i].innerHTML = `<button class="btn btn-dark" style="width:90px" onclick="window.location.href='http://127.0.0.1:5500/login.html';">Login</button>
+                        <button class="btn btn-dark" style="width:90px" onclick="window.location.href='http://127.0.0.1:5500/signup.html';">Sign Up</button>`;
+        }
+        // location.reload();
+    }
+</script>
+<script>
+    fetch('http://localhost:3100/getBlogData')
+        .then(res => {
+            return res.json();
+        })
+        .then(data => {
+            // console.log(data);
+            let markup = ""
+            for (let i = 0; i < data.length; i++) {
+                markup = markup + `<div class="p-2 md:w-1/3 w-full">
+          <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="${data[i].blog_image}" alt="blog">
+            <div class="p-2 bg-black">
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3 text-white">${data[i].blog_title}</h1>
+              <div class="flex items-center flex-wrap flex-row justify-between">
+                <button class="myBtn btn btn-dark" onclick="displayModal('${data[i].blog_description}','${data[i].blog_title}','${data[i].blog_image}')">Read Blog</button>
+                <div class="flex justify-left p-2">
+                <span class="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                  </svg>${data[i].blog_views}
+                </span>
+                <span class="text-gray-400 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                    <i class="fa-regular pr-1 fa-clock"></i>${data[i].blog_time}
+                </span>
+                <span class="text-gray-400 inline-flex items-center leading-none text-sm">
+                  <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                  </svg>${data[i].blog_comments}
+                </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`
+                document.getElementById("dynamic-blog").innerHTML = markup;
+            }
+        })
+        .catch(error => console.log(error))
+</script>
+<script>
+    const myTimeout = setTimeout(chechCookie, 2000);
+    function submitBlog() {
+        let emailc = getCookie("email");
+        if (emailc != "") {
+            const form = document.getElementById("form-file-input");
+            const fd = new FormData(form);
+            console.log(fd)
+            // const urlEncoded = new URLSearchParams(fd).toString();
+            let blog = document.getElementById("blog").value;
+            let title = document.getElementById("title").value;
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let blog_image = document.getElementById("blog_image").value;
+            console.log(blog_image)
+            if (!ValidateEmail(email)) {
+                alert("Enter a valid email Id");
+                return;
+            }
+            if (name.length < 3) {
+                alert("Enter a valid name");
+                return;
+            }
+            sendEmail(email,name,title);
+            fetch("http://localhost:3100/addBlog", {
+                method: "POST",
+                body: fd
+            });
+            alert("Your blog is added");
+            // location.reload();
+        } else {
+            alert("Only login user can write a blog");
+            // location.reload();
+        }
+
+    }
+    function ValidateEmail(input) {
+        var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (input.match(validRegex)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function chechCookie() {
+        let email = getCookie("email");
+        if (email != "") {
+        } else {
+            let btn_arr = document.getElementsByClassName("btn-disable-flag");
+            for (let i = 0; i < btn_arr.length; i++) {
+                btn_arr[i].classList.add("btn-disable");
+            }
+        }
+    }
+</script>
+<script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementsByClassName("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    for (let i = 0; i < btn.length; i++) {
+        btn[i].onclick = function () {
+            modal.style.display = "block";
+        }
+    }
+    function displayModal(str, title, img) {
+        modal.style.display = "block";
+        document.getElementById("dynamic-text").innerText = str
+        document.getElementById("dynamic-image").src = img
+        document.getElementById("dynamic-title").innerText = title
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+<script>
+    function showDescription(id) {
+        fetch('http://localhost:3100/getBlogDataUsingId')
+            .then(res => {
+                return res.json();
+            })
+            .then(data => {
+                // console.log(data);
+                let markup = ""
+                for (let i = 0; i < data.length; i++) {
+                    markup = markup + ``
+                    document.getElementById("dynamic-blog").innerHTML = markup;
+                }
+            })
+            .catch(error => console.log(error))
+    }
+</script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(email,name,blog_title) {
+            let msg = "Your Blog is published <br><br>Name: " + name + "<br>Blog Title: " + blog_title + "<br>Checkout your popular blog<br><br>Thank You.";
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "jdarshan535@gmail.com",
+                Password: "5AD666C38FF8083C203B9A079C5DD5B65388",
+                To: email,
+                From: "jdarshan535@gmail.com",
+                Subject: "Your blog is added",
+                Body: msg
+            }).then(
+                message => {
+                    if (message == 'OK') {
+                        console.log("Your mail is recorded. We will contact you shortly")
+                    } else {
+                        console.log(message)
+                    }
+                }
+            );
+        }
+    </script>
+
+</html>
